@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Post;
+
+use Illuminate\HTTP\Request;
 
 class PostController extends Controller
 {
@@ -12,4 +13,9 @@ class PostController extends Controller
         return view('posts.index')->with(['posts' => $post->getPaginateByLimit(5)]);
     }
     //
+
+    public function show(Post $post)
+    {
+        return view('posts.show')->with(['post' => $post]);
+    }
 }
