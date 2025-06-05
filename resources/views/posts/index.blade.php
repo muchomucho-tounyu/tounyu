@@ -26,6 +26,7 @@
     <div class='paginate'>
         {{$posts->links()}}
     </div>
+    <a href='/posts/create'>create</a>
 </body>
 
 </html>
